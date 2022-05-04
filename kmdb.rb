@@ -102,6 +102,22 @@ new_movie3["year_released"] = 2012
 new_movie3["rated"] = "PG-13"
 new_movie3["studio_id"] = warner_bros["id"]
 
+new_actor1 = Movie.new
+new_actor1["name"] = "Christian Bale" #1
+
+new_actor2 = Movie.new
+new_actor2["name"] = "Michael Caine" #2
+
+new_actor3 = Movie.new
+new_actor3["name"] = "Liam Neeson" #3
+
+new_actor4 = Movie.new
+new_actor4["name"] = "Katie Holmes" #4
+
+new_actor5 = Movie.new
+new_actor5["name"] = "Gary Oldman" #5
+
+
 
 
 # Prints a header for the movies output
