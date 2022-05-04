@@ -1,3 +1,4 @@
+Model.destroy_all
 # In this assignment, you'll be using the domain model from hw1 (found in the hw1-solution.sql file)
 # to create the database structure for "KMDB" (the Kellogg Movie Database).
 # The end product will be a report that prints the movies and the top-billed
@@ -78,6 +79,31 @@
 # Do not use hard-coded foreign key IDs.
 # TODO!
 
+new_studio = Studio.new
+new_studio["name"] = "Warner Bros"
+
+warner_bros=Studio.where({"name" => "Warner Bros"})
+
+new_movie1 = Movie.new
+new_movie1["title"] = "Batman Begins"
+new_movie1["year_released"] = 2005
+new_movie1["rated"] = "PG-13"
+new_movie1["studio_id"] = warner_bros["id"]
+
+new_movie2 = Movie.new
+new_movie2["title"] = "The Dark Knight"
+new_movie2["year_released"] = 2008
+new_movie2["rated"] = "PG-13"
+new_movie2["studio_id"] = warner_bros["id"]
+
+new_movie3 = Movie.new
+new_movie3["title"] = "The Dark Knight Rises"
+new_movie3["year_released"] = 2012
+new_movie3["rated"] = "PG-13"
+new_movie3["studio_id"] = warner_bros["id"]
+
+
+
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
@@ -94,3 +120,5 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+
+
